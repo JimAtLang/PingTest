@@ -1,12 +1,19 @@
 from ping3 import  ping
 import time
+from datetime import datetime
 
-fl = open("905-20241022-4pm.txt","a")
+room = "915"
+now = datetime.today()
+fn = f'rm{room}-{now.year}{now.month:02}{now.day:02}-{now.hour:02}{now.minute:02}'
+# print(fn)
+fl = open(fn,"a")
+
+fl.write("Room "+ room + str(now) +"\n")
 
 f = 0
 n = 0
 sum = 0
-times = 21600
+times = 3
 succ = 0
 for i in range(times):
     p = str(ping("8.8.8.8"))
