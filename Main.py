@@ -7,7 +7,7 @@ from os import environ
 
 room = "915"
 now = datetime.today()
-fn = f'rm{room}-{os.environ['COMPUTERNAME']}-{now.year}{now.month:02}{now.day:02}-{now.hour:02}{now.minute:02}'
+fn = f'rm{room}-{os.environ['COMPUTERNAME']}-{now.year}{now.month:02}{now.day:02}-{now.hour:02}{now.minute:02}.txt'
 # print(fn)
 fl = open(fn,"a")
 
